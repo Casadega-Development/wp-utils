@@ -1,0 +1,20 @@
+{
+  "name": "casadev/wp-utils",
+  "type": "library",
+  "description": "Helpers for Wordpress theme and plugin development",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Reggie O'Farrell",
+      "email": "reggie@casadegadevelopment.com"
+    }
+  ],
+  "require": {
+    "php": "7.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "CasaDev_WP_Utils\\": "lib/"
+    }
+  }
+}
