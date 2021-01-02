@@ -17,7 +17,7 @@ class Color {
    *
    * @link https://gist.github.com/stephenharris/5532899
    */
-  public static function color_luminance( $hex, $percent ) {
+  public static function luminance( $hex, $percent ) {
 
   	// validate hex string
 

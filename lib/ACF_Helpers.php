@@ -10,12 +10,12 @@ namespace CasaDev_WP_Utils;
  */
 class ACF_Helpers {
   /**
-   * Returns all acf data for an array of posts
+   * Returns all post data and acf data for an array of posts
    *
    * @param  array $posts array of post objects or post ids
    * @return array
    */
-  public static function get_acf_for_posts( $posts, $is_single = false ) {
+  public static function get_posts( $posts, $is_single = false ) {
   	if ( $is_single ) {
   		$post = get_post( $posts );
   		$fields = (array) $post;
@@ -24,7 +24,7 @@ class ACF_Helpers {
   		if ( function_exists( 'get_fields' ) ) {
   			$acf = get_fields( $post->ID );
   		} else {
-  			trigger_error( 'casadev_get_acf_for_posts called but ACF is not installed' );
+  			trigger_error( '\CasaDev_WP_Utils\ACF_Helpers::get_acf_for_posts called but ACF is not installed' );
   			$acf = [];
   		}
 
@@ -45,7 +45,7 @@ class ACF_Helpers {
   			if ( function_exists( 'get_fields' ) ) {
   				$acf = get_fields( $post->ID );
   			} else {
-  				trigger_error( 'casadev_get_acf_for_posts called but ACF is not installed' );
+  				trigger_error( '\CasaDev_WP_Utils\ACF_Helpers::get_acf_for_posts called but ACF is not installed' );
   				$acf = [];
   			}
 

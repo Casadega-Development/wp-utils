@@ -47,7 +47,7 @@ class Logging {
    *
    * @return void
   */
-  public static function js_console_log($name, $data = NULL) {
+  public static function js_console($name, $data = NULL) {
     if (! $name) return false;
 
     $isevaled = false;
