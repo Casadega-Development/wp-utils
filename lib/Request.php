@@ -10,7 +10,7 @@ use CasaDev_WP_Utils\Logging;
  * Helplers for remote requests
  *
  */
-class Requests {
+class Request {
   /**
    * Checks a wp_remote_get request for errors and optionally sends an email on error
    * @param  array|WP_Error $request 	  either a reponse from the wp_remote_request call
