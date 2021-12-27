@@ -10,7 +10,7 @@ add the repo for this package to the `repositories` array in your `composer.json
 "repositories": [
   {
     "type": "vcs",
-    "url": "git@github.com:casadegadevelopment/wp-utils.git"
+    "url": "git@github.com:Casadega-Development/wp-utils.git"
   }
 ],
 ```
