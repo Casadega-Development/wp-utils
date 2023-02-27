@@ -16,7 +16,7 @@ class Logging {
    */
   public static function print_log($label, $data) {
     $print = print_r($data, true);
-    trigger_error("[$label]: \n$print");
+    error_log("[$label]: \n$print");
   }
 
   /**
