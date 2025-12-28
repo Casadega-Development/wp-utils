@@ -321,8 +321,8 @@ class RestRouteSchema {
    * @see https://developer.wordpress.org/reference/functions/register_rest_route/
    */
   public function __construct(array $schema) {
-    $this->url_params = $schema['url_params'];
-    $this->query_params = $schema['query_params'];
-    $this->body_params = $schema['body_params'];
+    $this->url_params = $schema['url_params'] ?? [];
+    $this->query_params = $schema['query_params'] ?? [];
+    $this->body_params = $schema['body_params'] ?? [];
   }
 }
