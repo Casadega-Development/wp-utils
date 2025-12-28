@@ -1,9 +1,5 @@
 <?php
 
-// Exit if accessed directly.
-
-defined('ABSPATH') || exit;
-
 namespace CasaDev_WP_Utils;
 
 /**

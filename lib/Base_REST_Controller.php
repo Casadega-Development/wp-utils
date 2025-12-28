@@ -1,7 +1,5 @@
 <?php
 
-if (!defined('ABSPATH')) exit;
-
 namespace CasaDev_WP_Utils;
 
 use CasaDev_WP_Utils\Logging;
