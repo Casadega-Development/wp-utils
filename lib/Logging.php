@@ -7,6 +7,9 @@ namespace CasaDev_WP_Utils;
  *
  * Helplers for logging
  *
+ * @package CasaDev_WP_Utils
+ * @subpackage Logging
+ * @since 1.0.0
  */
 class Logging {
   /**
@@ -46,7 +49,7 @@ class Logging {
    * @param $data: variable (scalar/mixed) arrays/objects, etc to be logged
    *
    * @return void
-  */
+   */
   public static function js_console($name, $data = NULL) {
     if (! $name) return false;
 

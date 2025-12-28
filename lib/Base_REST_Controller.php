@@ -5,6 +5,15 @@ if (!defined('ABSPATH')) exit;
 namespace CasaDev_WP_Utils;
 
 use CasaDev_WP_Utils\Logging;
+use CasaDev_WP_Utils\HttpError;
+use CasaDev_WP_Utils\DownstreamServiceError;
+
+use WP_REST_Controller;
+use WP_REST_Request;
+use WP_REST_Response;
+use WP_Error;
+use Exception;
+
 
 /**
  * Base REST API Controller for Quantca
@@ -13,6 +22,10 @@ use CasaDev_WP_Utils\Logging;
  * - Error handling with standardized logging and Sentry integration
  * - Common properties and constructor patterns
  * - Helper methods for consistent API responses
+ *
+ * @package CasaDev_WP_Utils
+ * @subpackage Base_REST_Controller
+ * @since 2.0.0
  */
 abstract class Base_REST_Controller extends WP_REST_Controller {
 

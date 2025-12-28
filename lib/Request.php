@@ -9,6 +9,9 @@ use CasaDev_WP_Utils\Logging;
  *
  * Helplers for remote requests
  *
+ * @package CasaDev_WP_Utils
+ * @subpackage Request
+ * @since 1.0.0
  */
 class Request {
   /**
@@ -23,13 +26,13 @@ class Request {
   public static function error_check($request, $error_title, $send_email = true, $email = null) {
     $notif_email = $email ?? get_option('admin_email');
 
-    if ( is_wp_error( $request ) ) {
+    if (is_wp_error($request)) {
       $error_print = print_r(
         $request->get_error_message(),
         true
       );
 
-      if ( $send_email ) {
+      if ($send_email) {
         wp_mail($notif_email, $error_title, $error_print);
       }
 
@@ -38,7 +41,7 @@ class Request {
       return false;
     }
 
-    if ( $request['response']['code'] < 200 || $request['response']['code'] >= 300 ) {
+    if ($request['response']['code'] < 200 || $request['response']['code'] >= 300) {
       $error_print = print_r(
         $request['response'],
         true
@@ -46,7 +49,7 @@ class Request {
 
       $request_print = print_r($request, true);
 
-      if ( $send_email ) {
+      if ($send_email) {
         wp_mail($notif_email, $error_title, "$error_print\n\n$request_print");
       }
 
@@ -55,6 +58,6 @@ class Request {
       return false;
     }
 
-	  return true;
+    return true;
   }
 }
